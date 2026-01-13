@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Avalanche Wallet Connect</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <div id="canvas-container">
+        <canvas id="ditherCanvas"></canvas>
+    </div>
+
+    <div class="container">
+        <h1>Avalanche dApp</h1>
+        <p class="subtitle">Connect Wallet (Core Wallet)</p>
+
+        <button id="connectBtn">Connect Wallet</button>
+
+        <div id="error" class="error-message"></div>
+
+        <div class="card">
+            <p><strong>Status:</strong> <span id="status">Not Connected</span></p>
+            <p><strong>Wallet Address:</strong></p>
+            <p id="address" title="">-</p>
+            <p><strong>Network:</strong> <span id="network">-</span></p>
+            <p><strong>Balance:</strong> <span id="balance">-</span> AVAX</p>
+        </div>
+              <div class="card2">
+        <p><strong>Dicky Baskara Hidayat | NIM : 241011402329</strong></p>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="dither.js"></script>
+</body>
+</html>
