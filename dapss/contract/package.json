@@ -1,0 +1,46 @@
+{
+  "name": "contract",
+  "version": "0.0.0",
+  "description": "smart contract day 2 unpam ws",
+  "keywords": [
+    "smart",
+    "contract",
+    "solidity"
+  ],
+  "homepage": "https://github.com/DickyDickuy/Workshop_Unpam#readme",
+  "bugs": {
+    "url": "https://github.com/DickyDickuy/Workshop_Unpam/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DickyDickuy/Workshop_Unpam.git"
+  },
+  "license": "MIT",
+  "author": "Dickuy",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "packageManager": "yarn@4.12.0+sha512.f45ab632439a67f8bc759bf32ead036a1f413287b9042726b7cc4818b7b49e14e9423ba49b18f9e06ea4941c1ad062385b1d8760a8d5091a1a31e5f6219afca8",
+  "devDependencies": {
+    "@nomicfoundation/hardhat-ignition": "^0.15.0",
+    "@nomicfoundation/hardhat-ignition-viem": "^0.15.0",
+    "@nomicfoundation/hardhat-network-helpers": "^1.0.0",
+    "@nomicfoundation/hardhat-toolbox-viem": "^4.1.0",
+    "@nomicfoundation/hardhat-verify": "^2.0.0",
+    "@nomicfoundation/hardhat-viem": "^2.0.0",
+    "@types/chai": "^4.2.0",
+    "@types/chai-as-promised": "^7.1.6",
+    "@types/mocha": ">=9.1.0",
+    "@types/node": ">=22.0.0",
+    "chai": "^4.2.0",
+    "dotenv": "^17.2.3",
+    "hardhat": "^2.14.0",
+    "hardhat-gas-reporter": "^2.3.0",
+    "solidity-coverage": "^0.8.0",
+    "ts-node": ">=8.0.0",
+    "typescript": "~5.0.4",
+    "viem": "^2.7.6"
+  }
+}
