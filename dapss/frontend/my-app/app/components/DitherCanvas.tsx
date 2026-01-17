@@ -14,10 +14,10 @@ export default function DitherCanvas() {
 
     const config = {
       waveColor: [36, 255, 80],  
-      pixelSize: 4, 
+      pixelSize: 5, 
       waveAmplitude: 0.3,
-      waveFrequency: 2,
-      waveSpeed: 0.03,
+      waveFrequency: 5,
+      waveSpeed: 0.01,
       mouseRadius: 400,
       easeFactor: 0.08,
       colorNum: 4,
@@ -56,9 +56,9 @@ export default function DitherCanvas() {
     const animate = () => {
       time += config.waveSpeed;
 
-      // Smooth mouse movement interpolation
-      currentMouse.x += (targetMouse.x - currentMouse.x) * config.easeFactor;
-      currentMouse.y += (targetMouse.y - currentMouse.y) * config.easeFactor;
+      // Instant mouse movement (no smoothing per user request)
+      currentMouse.x = targetMouse.x;
+      currentMouse.y = targetMouse.y;
 
       // Smooth radius interpolation (Ease In / Ease Out)
       const targetRadius = isHovering ? config.mouseRadius : 0;
@@ -123,12 +123,16 @@ export default function DitherCanvas() {
 
     window.addEventListener("resize", resize);
     window.addEventListener("mousemove", handleMouseMove);
+    document.addEventListener("mouseleave", handleMouseLeave);
+    document.addEventListener("mouseenter", handleMouseEnter);
     resize();
     animate();
 
     return () => {
       window.removeEventListener("resize", resize);
       window.removeEventListener("mousemove", handleMouseMove);
+      document.removeEventListener("mouseleave", handleMouseLeave);
+      document.removeEventListener("mouseenter", handleMouseEnter);
       cancelAnimationFrame(animationFrameId);
     };
   }, []);
